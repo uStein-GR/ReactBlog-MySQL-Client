@@ -23,7 +23,7 @@ const Single = () => {
   useEffect(() => {
     const fetchData = async () => {
       try{
-        const res = await axios.get(`http://localhost:8800/api/posts/${postId}`, { withCredentials: true })
+        const res = await axios.get(`http://localhost:8000/api/posts/${postId}`, { withCredentials: true })
         setPost(res.data)
       }catch(err){
         console.log(err)
@@ -34,7 +34,7 @@ const Single = () => {
 
   const handleDelete = async () => {
     try{
-      await axios.delete(`http://localhost:8800/api/posts/${postId}`, {withCredentials: true})
+      await axios.delete(`http://localhost:8000/api/posts/${postId}`, {withCredentials: true})
       navigate("/")
     }catch(err){
       console.log(err)

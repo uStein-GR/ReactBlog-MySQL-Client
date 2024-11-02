@@ -32,8 +32,8 @@ const Login = () => {
     <div className='auth'>
       <h1>Login</h1>
       <form>
-        <input required type="text" placeholder='username' name='username' onChange={handleChange}/>
-        <input required type="password" placeholder='password' name='password' onChange={handleChange}/>
+        <input required type="text" placeholder='Username' name='username' onChange={handleChange}/>
+        <input required type="password" placeholder='Password' name='password' onChange={handleChange}/>
         <button onClick={handleSubmit}>Login</button>
         {err && <p>{err}</p>}
         <span>Don't you have an account? 
